@@ -39,7 +39,8 @@ body {
 /* Description  */
 .desc {
     padding-top: 1em;
-    padding-right: 10em;
+    width: 70%;
+    /**padding-right: 10em;*/
     font-weight: 400;
     color: var(--desaturated-red);
     font-size: 1.35em;
@@ -58,11 +59,12 @@ body {
 }
 
 .info {
-    width: 45%;
-    margin: auto;
+    flex: 2;
+    margin: auto 3em;
+    padding: 0 auto;
 }
 
-.hero img {
+.hero {
     flex: 1;
     width: 100%;
     height: auto;
@@ -80,7 +82,7 @@ form {
 /* Style input type of email */
 input[type=text] {
     width: 75%;
-    background: transparent;
+    background-color: var(--gradient-light);
     height: 5.2em;
     padding: 12px 30px;
     border: 1px solid #ccc;
@@ -107,10 +109,53 @@ button[type=submit] {
 }
 
 .error {
-    color: var(--soft-red);
+    border: 1px solid var(--soft-red) !important;
     font-weight: 300;
+    background: url("../../images/icon-error.svg") no-repeat calc(100% - 8em);
 }
 
-.errorForm {
-    border: 1px solid red;
+
+@media only screen and (max-width: 1025px) and (min-width: 751px) {
+
+    .container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .info {
+        margin-top: 2.5em;
+        width: 75%;
+    }
+
+    .desc {
+        width: 95%;
+    }
+
+    .hero {
+        flex: 1;
+        width: 1024px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .info {
+        margin: 3em 3em;
+    }
+
+    .desc {
+        width: 95%;
+    }
+
+    .hero {
+        flex: 1;
+        content: url("../../images/hero-mobile.jpg");
+    }
 }
