@@ -6,7 +6,7 @@ let error = 0;
 function validateForm() {
     event.preventDefault();
 
-    const mail = document.getElementById("mail");
+    const mail = document.getElementById("email");
     const mailValue = mail.value;
     
     /** Controle Mail */
